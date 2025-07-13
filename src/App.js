@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Navbar from "./components/navbar";
+import Productoptions from "./components/productsoptions";
+import Productitems from "./components/productitems";
+import Runthrough from "./components/runthrough";
+import Productcartegories from "./components/productcategories";
+import Statement from "./components/statement";
+import Amba from "./components/amba";
+import News from "./components/news";
+import Socials from "./components/socials";
+import Footer from "./components/footer";
+import Cred from "./components/cred";
+import Topifooter from "./components/topifooter";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <div className=""> 
+    <Navbar announcement="Topicrem celebrates its 30th anniversary!" />
+    <Productoptions />
+    <Runthrough />
+    <Productitems />
+    <Productcartegories />
+    <Statement />
+    <Amba />
+    <News />
+    <Socials />
+    <Cred />
+    <Topifooter />
+    <Footer />
+
+   </div>
   );
 }
 
