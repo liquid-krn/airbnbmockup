@@ -17,12 +17,12 @@ function Topifooter() {
     <div className="mb-5 grid grid-cols-1 md:grid-cols-2 gap-6 w-[90%] m-auto mt-10 bg-gray-100 p-6 rounded-lg">
     
       <div className="grid gap-2">
-      <h1 className="m-auto text-lg font-semibold mb-2">ADDITIONAL INFORMATION</h1>
+      <h1 className="text-lg font-semibold mb-2 ml-3">ADDITIONAL INFORMATION</h1>
         {topifooteroptions.map((item, index) => (
           <Button
             key={index}
             name={item}
-            className="text-gray-700 hover:text-blue-300 transition-colors text-sm"
+            className="ml-3 text-left text-gray-700 hover:text-blue-300 transition-colors text-sm"
           />
         ))}
       </div>

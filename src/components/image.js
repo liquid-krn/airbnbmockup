@@ -1,11 +1,14 @@
+// image.jsx
 import React from "react";
 
-function IMG(props) {
-    return (
-      <div className="m-auto">
-        <img src={props.src} alt={props.alt} className={props.imgClassname}/>
-      </div>
-    );
-  }
-  
-export default IMG
+function IMG({ src, alt, imgClassname }) {
+  return (
+    <img
+      src={src}
+      alt={alt}
+      className={`${imgClassname} w-full h-full object-cover`}
+    />
+  );
+}
+
+export default IMG;

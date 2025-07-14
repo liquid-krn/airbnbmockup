@@ -10,21 +10,21 @@ import "swiper/css/pagination";
 const products = [
   {
     img: "/image/topibg.jpg",
-    alt: "",
+    alt: "Sun Protect",
     topText: "Sur toute la gamme",
     midText: "SUN PROTECT",
     bottomText: "Protection & soin au délicat parfum d'été",
   },
   {
     img: "/image/topibg0.jpg",
-    alt: "",
+    alt: "MELA",
     topText: "Sur toute la gamme * anti-taches",
     midText: "MELA",
     bottomText: "Pour un teint unifié & éclatant",
   },
   {
     img: "/image/topibg02.jpg",
-    alt: "",
+    alt: "Ultra Hydratant",
     topText: "Nacré & Scintillant Corps",
     midText: "ULTRA-HYDRATANT",
     bottomText: "Cet été, ALLIEZ HYDRATATION & PAILLETTES",
@@ -36,15 +36,10 @@ function ProductOptions() {
     <div className="w-full">
       <Swiper
         modules={[Navigation, Pagination]}
-        spaceBetween={2}
+        spaceBetween={10}
         slidesPerView={1}
         navigation
         pagination={{ clickable: true }}
-        breakpoints={{
-          640: { slidesPerView: 1 },
-          768: { slidesPerView: 1 },
-          1024: { slidesPerView: 1 },
-        }}
         className="w-full"
       >
         {products.map((item, index) => (
