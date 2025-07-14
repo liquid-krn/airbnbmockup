@@ -4,7 +4,7 @@ import IMG from "./image";
 
 function Productcards(props) {
   return (
-    <div className="w-full relative h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] overflow-hidden">
+    <div className="w-full relative h-[400px] overflow-hidden">
       <div className="absolute inset-0 z-0">
         <IMG
           src={props.imgsrc}
@@ -12,20 +12,20 @@ function Productcards(props) {
           imgClassname="w-full h-full object-cover"
         />
       </div>
-      <div className="relative z-10 max-w-xl px-4 sm:px-6 ml-4 sm:ml-10 mt-32 sm:mt-47">
-        <h3 className="font-serif text-base text-black sm:text-white">
+      <div className="relative z-10 max-w-xl px-6 ml-10 mt-40">
+        <h3 className="text-white font-serif text-base">
           {props.top}
         </h3>
-
-        <h1 className="font-serif text-2xl sm:text-4xl mt-4 text-black sm:text-[#eebb3a] drop-shadow sm:drop-shadow-lg">
+        <h1 className="text-[#eebb3a] font-serif text-4xl mt-4 drop-shadow">
           {props.mid}
         </h1>
-        <p className="font-serif text-lg mt-4 text-black sm:text-white drop-shadow sm:drop-shadow-md">
+        <p className="drop-shadow text-white font-serif text-lg mt-4">
           {props.bottom}
         </p>
-      <Button
+
+        <Button
           name="DECOUVRIR"
-          className="text-black sm:text-white border border-black sm:border-white mt-5 w-32 h-10 font-serif text-sm sm:text-base"
+          className="text-white border border-white mt-4 w-32 h-10 font-serif"
         />
       </div>
     </div>
