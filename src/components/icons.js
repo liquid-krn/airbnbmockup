@@ -4,11 +4,11 @@ import {faBars,faMagnifyingGlass,faLocationCrosshairs,faUser,} from "@fortawesom
 import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 
 const icons = [
-  <FontAwesomeIcon icon={faBars} key="1" size="lg" />,
-  <FontAwesomeIcon icon={faMagnifyingGlass} key="2" size="lg" />,
-  <FontAwesomeIcon icon={faLocationCrosshairs} key="3" size="lg" />,
-  <FontAwesomeIcon icon={faUser} key="4" size="lg" />,
-  <FontAwesomeIcon icon={faFacebook} key="5" size="lg" />
+  <FontAwesomeIcon icon={faBars} key="1" size="sm" />,
+  <FontAwesomeIcon icon={faMagnifyingGlass} key="2" size="sm" />,
+  <FontAwesomeIcon icon={faLocationCrosshairs} key="3" size="sm" />,
+  <FontAwesomeIcon icon={faUser} key="4" size="sm" />,
+  <FontAwesomeIcon icon={faFacebook} key="5" size="sm" />
 
 ];
 
