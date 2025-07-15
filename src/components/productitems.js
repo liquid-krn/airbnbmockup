@@ -1,10 +1,11 @@
 import React from "react";
 import Cards from "./cards";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation, Pagination, Scrollbar, A11y  } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 
 const products = [
   {
@@ -76,7 +77,6 @@ const products = [
 function ProductItems() {
   return (
     <div className="w-[95%] mx-auto mt-10">
-      {/* Header Tabs */}
       <div className="flex justify-center gap-6 text-gray-700 font-medium text-lg mb-6">
         {["What's new", "Bestsellers", "Our offers"].map((label, i) => (
           <button key={i} className="hover:text-blue-600 transition">
@@ -84,19 +84,17 @@ function ProductItems() {
           </button>
         ))}
       </div>
-
-      {/* Product Carousel */}
       <Swiper
-        modules={[Navigation, Pagination]}
+        modules={[Navigation, Pagination, Scrollbar, A11y]}
         spaceBetween={20}
-        navigation
-        pagination={{ clickable: true }}
+        slidesPerView={1.2}
         breakpoints={{
           320: { slidesPerView: 1.1 },
           640: { slidesPerView: 2.2 },
           768: { slidesPerView: 3 },
           1024: { slidesPerView: 4 },
         }}
+        scrollbar={{ draggable: true }}
         className="w-full"
       >
         {products.map((product, index) => (

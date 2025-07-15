@@ -28,7 +28,7 @@ function Topifooter() {
       </div>
 
       
-      <div>
+      <div className="ml-3">
         <h1 className="text-lg font-semibold mb-2">Newsletter</h1>
         <p className="text-sm text-gray-600 mb-4">
           Subscribe to our newsletter to receive our advice, news, and special offers!
