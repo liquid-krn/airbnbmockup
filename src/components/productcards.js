@@ -13,19 +13,19 @@ function Productcards(props) {
         />
       </div>
       <div className="relative z-10 max-w-xl px-6 ml-10 mt-40">
-        <h3 className="text-white font-serif text-base">
+        <h3 className="text-white font-bold font-serif text-base mb-2">
           {props.top}
         </h3>
-        <h1 className="text-[#eebb3a] font-serif text-4xl mt-4 drop-shadow">
+        <span className="border rounded-lg p-1 bg-white text-[#eebb3a] font-serif text-4xl mt-4 drop-shadow-black w-full">
           {props.mid}
-        </h1>
+        </span>
         <p className="drop-shadow text-white font-serif text-lg mt-4">
           {props.bottom}
         </p>
 
         <Button
           name="DECOUVRIR"
-          className="text-white border border-white mt-4 w-32 h-10 font-serif"
+          className="hover:bg-[#eebb3a] transition duration-300 text-white border border-white mt-4 w-32 h-10 font-serif"
         />
       </div>
     </div>
