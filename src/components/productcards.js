@@ -16,7 +16,7 @@ function Productcards(props) {
         <h3 className="text-white font-bold font-serif text-base mb-4">
           {props.top}
         </h3>
-        <span className="rounded-lg p-1 bg-white text-[#eebb3a] font-serif text-4xl mt-4 drop-shadow-black w-full">
+        <span className="rounded-lg p-1 bg-white text-[#eebb3a] font-serif text-3xl sm:text-4xl mt-4 drop-shadow-black w-full">
           {props.mid}
         </span>
         <p className="drop-shadow text-white font-serif text-lg mt-4">
