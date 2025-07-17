@@ -3,10 +3,18 @@ import icons from "./icons";
 
 function Navbar(props) {
   const [openDropdown, setOpenDropdown] = useState(null); 
-
+  const [menuDropdown, setmenuDropdown] = useState(null)
   function toggleDropdown(index){
-    setOpenDropdown(prev => (prev === index ? null : index));
+    setOpenDropdown((prev) => (prev === index ? null : index));
   };
+  function mouseover(){
+    setmenuDropdown((e)=>{
+      console.log(e);
+    })
+  }
+  function mouseout() {
+    console.log("moused out");
+  }
 
   return (
     <div className="bg-[#d7527d] w-full text-white text-center flex flex-col items-center font-serif text-sm font-medium py-2 relative z-50">
@@ -21,6 +29,8 @@ function Navbar(props) {
             <div key={index} className="relative">
               <button
                 onClick={() => toggleDropdown(index)}
+                onMouseEnter={mouseover}
+                onMouseLeave={mouseout}
                 className="text-gray-500 hover:text-yellow-300 transition duration-300 text-xl sm:text-2xl"
               >
                 {icon}

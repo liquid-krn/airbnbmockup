@@ -12,11 +12,11 @@ function Productcards(props) {
           imgClassname="w-full h-full object-cover"
         />
       </div>
-      <div className="relative z-10 max-w-xl px-6 ml-3 mt-30">
+      <div className="bg-gray-600/50 py-5 rounded-lg relative z-10 max-w-xl px-6 ml-3 mt-30 w-[95%]">
         <h3 className="text-white font-bold font-serif text-base mb-4">
           {props.top}
         </h3>
-        <span className="rounded-lg p-1 bg-white text-[#eebb3a] font-serif text-3xl sm:text-4xl mt-4 drop-shadow-black w-full">
+        <span className=" p-1 text-[#eebb3a] font-serif text-3xl sm:text-4xl mt-4 drop-shadow-black w-full">
           {props.mid}
         </span>
         <p className="drop-shadow text-white font-serif text-lg mt-4">
