@@ -1,5 +1,7 @@
 import React from "react";
 import Navbar from "./components/navbar";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import Productoptions from "./components/productsoptions";
 import Productitems from "./components/productitems";
 import Runthrough from "./components/runthrough";
@@ -11,24 +13,36 @@ import Socials from "./components/socials";
 import Footer from "./components/footer";
 import Cred from "./components/cred";
 import Topifooter from "./components/topifooter";
+import Location from "./components/location";
+import Signin from "./components/sigin";
 
 function App() {
   return (
-   <div className=""> 
-    <Navbar announcement="Topicrem celebrates its 30th anniversary!" />
-    <Productoptions />
-    <Runthrough />
-    <Productitems />
-    <Productcartegories />
-    <Statement />
-    <Amba />
-    <News />
-    <Socials />
-    <Cred />
-    <Topifooter />
-    <Footer />
-
-   </div>
+    <Router>
+      <Navbar announcement="Topicrem celebrates its 30th anniversary!" />
+      <Routes>
+        <Route path="/location" element={<Location />} />
+        <Route path="/signin" element={<Signin />} />
+        <Route
+          path="/"
+          element={
+            <>
+              <Productoptions />
+              <Runthrough />
+              <Productitems />
+              <Productcartegories />
+              <Statement />
+              <Amba />
+              <News />
+              <Socials />
+            </>
+          }
+        />
+      </Routes>
+        <Cred />
+        <Topifooter />
+        <Footer />
+    </Router>
   );
 }
 

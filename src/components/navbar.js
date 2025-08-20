@@ -1,11 +1,12 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import icons from "./icons";
 import Button from "./button";
 import Input from "./input";
 
 const burger = [
   "YOUR NEEDS",
-  "OUR Productcards",
+  "OUR PRODUCTS-CARDS",
   "RIGHT NOW",
   "OUR ADVICE",
   "OUR LABORATORY"
@@ -13,9 +14,16 @@ const burger = [
 
 function Navbar(props) {
   const [activeIcon, setActiveIcon] = useState(null); // store which icon is active
+  const navigate = useNavigate();
 
   function handleClick(index) {
-    setActiveIcon(prev => (prev === index ? null : index));
+    if (index === 2) {
+      navigate("/location"); 
+    }else if(index === 3){
+        navigate("/signin");
+    } else {
+      setActiveIcon(prev => (prev === index ? null : index));
+    }
   }
 
   return (
@@ -37,15 +45,11 @@ function Navbar(props) {
               </div>
             ))}
           </div>
-
-          {/* Logo */}
           <img
             src="/image/topilogo.jpg"
             alt="Topi Logo"
             className="h-10 sm:h-12 object-contain"
           />
-
-         
           <div className="flex items-center space-x-4 mr-4 relative">
             {icons.slice(2, 4).map((icon, index) => (
               <div key={index + 2} className="relative">
@@ -60,8 +64,6 @@ function Navbar(props) {
           </div>
         </div>
       </div>
-
-     
       {activeIcon === 0 && (
         <div className="absolute left-1/2 transform -translate-x-1/2 z-10 bg-white w-[90%] mt-2 p-4 rounded shadow grid grid-cols-2 gap-4">
           {burger.map((item, index) => (
@@ -74,10 +76,11 @@ function Navbar(props) {
         </div>
       )}
         {activeIcon === 1 && (
-       <div className="absolute left-1/2 transform -translate-x-1/2 z-10 bg-white w-[90%] mt-2 p-6 rounded-2xl shadow-lg">
+       <div className="fixed absolute left-1/2 transform -translate-x-1/2 z-10 bg-white w-[90%] mt-2 p-6 rounded-2xl shadow-lg">
         <Input iclassname="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-400 focus:border-pink-400 transition-all duration-300 shadow-sm" placeholder="Type something..." />
       </div>
       )}
+      
     </div>
   );
 }
