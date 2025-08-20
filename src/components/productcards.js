@@ -12,7 +12,7 @@ function Productcards(props) {
           imgClassname="w-full h-full object-cover"
         />
       </div>
-      <div className="bg-gray-600/50 py-5 rounded-lg relative z-10 max-w-xl px-6 ml-3 mt-30 w-[95%]">
+      <div className="bg-gray-600/50 py-5 rounded-lg relative z-10 max-w-xl px-6 ml-10 mt-30 w-[80%]">
         <h3 className="text-white font-bold font-serif text-base mb-4">
           {props.top}
         </h3>
