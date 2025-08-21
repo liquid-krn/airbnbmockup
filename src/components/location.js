@@ -5,7 +5,7 @@ import Button from "./button";
 
 function Location() {
   const [address, setAddress] = useState("");
-  const [coords, setCoords] = useState({ lat: 6.5244, lng: 3.3792 }); // default Lagos
+  const [coords, setCoords] = useState({ lat: 6.5244, lng: 3.3792 }); 
   const [mapLoaded, setMapLoaded] = useState(false);
 
   async function handleClick() {
