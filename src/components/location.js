@@ -40,7 +40,7 @@ function Location() {
 
         <div className="flex flex-col sm:flex-row items-center gap-4 mb-6">
           <Input
-            iclassName="flex-1 px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-400 focus:border-pink-400 transition-all duration-300 shadow-sm"
+            iclassname="flex-1 px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-400 focus:border-pink-400 transition-all duration-300 shadow-sm"
             placeholder="Enter a postcode or address"
             value={address}
             onChange={(e) => setAddress(e.target.value)}
