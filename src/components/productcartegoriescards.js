@@ -8,7 +8,7 @@ function Pccards(props) {
       <IMG
         src={props.src}
         alt={props.alt}
-        className={`w-full h-full object-cover ${props.imgclassName || ""}`}
+        imgClassname={props.imgClassname}
       />
 
       <div className="absolute bottom-4 z-10 ml-3">

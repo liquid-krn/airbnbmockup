@@ -4,7 +4,7 @@ import IMG from "./image";
 
 function Statement() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-[90%] mx-auto mt-10 bg-gray-100 rounded-lg shadow-md p-6 items-center">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full mx-auto mt-10 bg-gray-100 rounded-lg shadow-md p-6 items-center">
       <div className="px-4">
         <h1 className="font-semibold text-4xl leading-tight text-gray-800">
           <span className="text-gray-600">A gesture for</span> <br />

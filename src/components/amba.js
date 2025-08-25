@@ -4,7 +4,7 @@ import IMG from "./image";
 
 function Amba() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-6 w-[90%] mx-auto mt-10 bg-gray-100 rounded-lg overflow-hidden shadow-md p-6">
+    <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-6 w-full mx-auto mt-10 bg-gray-100 rounded-lg overflow-hidden shadow-md p-6">
       <div className="px-4">
         <h2 className="text-gray-600 text-3xl font-semibold">BECOME</h2>
         <h2 className="text-gray-600 text-3xl font-semibold mb-2">TOPICREM AMBASSADOR</h2>

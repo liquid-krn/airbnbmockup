@@ -106,6 +106,7 @@ function ProductItems() {
               ubottom={product.title}
               umid={product.size}
               lbottom={product.price}
+              imgClassname="cursor-pointer hover:scale-105 transfrom transition-transform duration-300 text-gray-600 hover:text-yellow-400 transition duration-300"
             />
           </SwiperSlide>
         ))}

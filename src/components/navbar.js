@@ -14,6 +14,9 @@ const burger = [
 
 function Navbar(props) {
   const [activeIcon, setActiveIcon] = useState(null);
+  function home(){
+    navigate("/")
+  }
   const navigate = useNavigate();
 
   function handleClick(index) {
@@ -36,7 +39,7 @@ function Navbar(props) {
               <button
                 key={index}
                 onClick={() => handleClick(index)}
-                className="text-gray-600 hover:text-yellow-400 transition duration-300 text-xl sm:text-2xl"
+                className="hover:scale-150 transfrom transition-transform duration-300 text-gray-600 hover:text-yellow-400 transition duration-300 text-xl sm:text-2xl"
               >
                 {icon}
               </button>
@@ -46,7 +49,8 @@ function Navbar(props) {
             <img
               src="/image/topilogo.jpg"
               alt="Topi Logo"
-              className="h-10 sm:h-12 object-contain"
+              className="h-10 hover:scale-105 transfrom transition-transform duration-300 sm:h-12 object-contain cursor-pointer"
+              onClick={home}
             />
           </div>
           <div className="flex-1 flex justify-end gap-6 sm:gap-10">
@@ -54,7 +58,7 @@ function Navbar(props) {
               <button
                 key={index + 2}
                 onClick={() => handleClick(index + 2)}
-                className="text-gray-600 hover:text-yellow-400 transition duration-300 text-xl sm:text-2xl"
+                className="hover:scale-150 transfrom transition-transform duration-300 cursor-pointer text-gray-600 hover:text-yellow-400 transition duration-300 text-xl sm:text-2xl"
               >
                 {icon}
               </button>

@@ -3,7 +3,7 @@ import IMG from "./image";
 
 function Cards(props) {
     return<div className="mt-5 m-auto bg-white pb-6">
-    <IMG src={props.src} alt={props.alt} className={props.className} />
+    <IMG src={props.src} alt={props.alt} imgClassname={props.imgClassname} />
     <div className="text-center font-sans mt-9">
    <p className="font-sans text-gray-500 text-sm  font-semibold">{props.top}</p>
    <h1 className="font-sans font-semibold">{props.mid}</h1>

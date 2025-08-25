@@ -26,7 +26,7 @@ const prod = [
   {
     imgsrc: "/image/topismooth4.jpg",
     ptype: "BABY",
-    pfun: "Take care babies",
+    pfun: "Takes care babies",
   },
   {
     imgsrc: "/image/topismooth5.jpg",
@@ -75,7 +75,8 @@ function Productcartegories() {
           <SwiperSlide key={index}>
             <Pccards
               src={item.imgsrc}
-              bclassName="bg-blue-500 hover:bg-blue-700 text-white font-normal py-2 px-4 rounded-full"
+              imgClassname="hover:scale-105 hover:opacity-70 transition-opacity duration-200 transfrom transition-transform duration-300 w-full h-full object-cover cursor-pointer "
+              bclassName="bg-blue-500 hover:bg-blue-700 text-white font-normal py-2 px-4 rounded-full hover:scale-105 transfrom transition-transform duration-300 text-gray-600 hover:text-yellow-400 transition duration-300"
               name={item.ptype}
               ptype={item.pfun}
             />

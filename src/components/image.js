@@ -6,7 +6,7 @@ function IMG({ src, alt, imgClassname }) {
     <img
       src={src}
       alt={alt}
-      className={`${imgClassname} w-full h-full object-cover`}
+      className={imgClassname}
     />
   );
 }
