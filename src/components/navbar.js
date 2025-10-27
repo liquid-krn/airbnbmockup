@@ -3,24 +3,32 @@ import { useNavigate } from "react-router-dom";
 import icons from "./icons";
 import Button from "./button";
 import Input from "./input";
-
-const burger = [
-  "YOUR NEEDS",
-  "OUR PRODUCTS-CARDS",
-  "RIGHT NOW",
-  "OUR ADVICE",
-  "OUR LABORATORY"
-];
+import menu from "./items";
 
 function Navbar(props) {
   const [activeIcon, setActiveIcon] = useState(null);
+  // const [menuactiveIcon, menusetActiveIcon] = useState(null);
+  const navigate = useNavigate(); 
   function home(){
     navigate("/")
+  }  
+  function menuoption(index){
+   if(index===0){
+    console.log(index + " needs");
+   }else if( index === 1){
+    console.log(index + " product cards");
+   }else if(index === 2){
+    console.log(index + " right now");
+   }else if( index === 3){
+    console.log(index + " advice");
+   }
+   else if(index === 4){
+    console.log(index + " lab");
+   }
   }
-  const navigate = useNavigate();
-
+  
   function handleClick(index) {
-    if (index === 2) {
+    if (index === 2) {   
       navigate("/location");
     } else if (index === 3) {
       navigate("/signin");
@@ -39,7 +47,7 @@ function Navbar(props) {
               <button
                 key={index}
                 onClick={() => handleClick(index)}
-                className="hover:scale-150 transfrom transition-transform duration-300 text-gray-600 hover:text-yellow-400 transition duration-300 text-xl sm:text-2xl"
+                className="hover:scale-110 transform transition-transform duration-300 text-gray-600 hover:text-yellow-400 transition duration-300 text-xl sm:text-2xl"
               >
                 {icon}
               </button>
@@ -49,7 +57,7 @@ function Navbar(props) {
             <img
               src="/image/topilogo.jpg"
               alt="Topi Logo"
-              className="h-10 hover:scale-105 transfrom transition-transform duration-300 sm:h-12 object-contain cursor-pointer"
+              className="h-10 hover:scale-105 transform transition-transform duration-300 sm:h-12 object-contain cursor-pointer"
               onClick={home}
             />
           </div>
@@ -58,7 +66,7 @@ function Navbar(props) {
               <button
                 key={index + 2}
                 onClick={() => handleClick(index + 2)}
-                className="hover:scale-150 transfrom transition-transform duration-300 cursor-pointer text-gray-600 hover:text-yellow-400 transition duration-300 text-xl sm:text-2xl"
+                className="hover:scale-110 transform transition-transform duration-300 cursor-pointer text-gray-600 hover:text-yellow-400 transition duration-300 text-xl sm:text-2xl"
               >
                 {icon}
               </button>
@@ -68,10 +76,11 @@ function Navbar(props) {
       </div>
       {activeIcon === 0 && (
         <div className="absolute left-1/2 transform -translate-x-1/2 z-10 bg-white w-[90%] mt-2 p-4 rounded-lg shadow grid grid-cols-1 sm:grid-cols-2 gap-4">
-          {burger.map((item, index) => (
+          {menu.map((item, index) => (
             <Button
               key={index}
               name={item}
+              click={()=>{menuoption(index)}}
               className="block w-full text-left px-4 py-2 bg-blue-50 hover:bg-blue-100 rounded"
             />
           ))}

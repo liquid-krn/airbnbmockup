@@ -27,7 +27,7 @@ function Signin() {
               iclassname="w-full rounded-lg border border-gray-200 
                          focus:outline-none focus:ring-2 focus:ring-pink-400 
                          focus:border-pink-400 transition-all duration-300 
-                         shadow-sm placeholder-gray-400"
+                         shadow-sm placeholder-granpmdy-400"
             />
             <Input
               type="password"

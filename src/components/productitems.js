@@ -11,7 +11,7 @@ const products = [
   {
     image: "/image/topicream.jpg",
     skinType: "Sensitive skin exposed to sun",
-    benefit: "Sun protect",
+    benefit: "SUN PROTECT",
     title: "MOISTURIZING SUN SPRAY SPF30",
     size: "30/150 ML",
     price: "17.70$",
@@ -19,7 +19,7 @@ const products = [
   {
     image: "/image/topicream1.jpg",
     skinType: "Sensitive skin exposed to sun",
-    benefit: "Sun protect",
+    benefit: "SUN PROTECT",
     title: "MOISTURIZING SUN SPRAY SPF50+",
     size: "50+/150 ML",
     price: "18.80$",
@@ -106,7 +106,7 @@ function ProductItems() {
               ubottom={product.title}
               umid={product.size}
               lbottom={product.price}
-              imgClassname="cursor-pointer hover:scale-105 transfrom transition-transform duration-300 text-gray-600 hover:text-yellow-400 transition duration-300"
+              imgClassname="hover:scale-105 transfrom transition-transform duration-300 text-gray-600 hover:text-yellow-400 transition duration-300"
             />
           </SwiperSlide>
         ))}
